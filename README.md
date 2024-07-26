@@ -23,7 +23,7 @@ Instalación
 
 1. Clonar el repositorio
 
-    git clone https://git@github.com:agomezpe/SistemaCuentas.git
+    git clone [https://git@github.com:agomezpe/SistemaCuentas.git](https://github.com/agomezpe/SistemaCuentas.git)
     cd tu_repositorio
 
 2. Compilar y empaquetar el proyecto
