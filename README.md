@@ -1,111 +1,112 @@
-Sistema de Gestión de Cuentas
+Sure, here's the translation of the README to English:
 
-Descripción
+---
 
-El Sistema de Gestión de Cuentas es una aplicación diseñada para administrar cuentas de clientes, incluyendo la creación, actualización y eliminación de cuentas, así como la gestión de información de clientes. Este sistema utiliza una arquitectura basada en RESTful APIs y está construido con Spring Boot.
+# Account Management System
 
-Características
+## Description
 
-Creación, actualización y eliminación de cuentas de clientes.
-Gestión de información personal de clientes.
-Validación de datos de entrada.
-Soporte para pruebas unitarias e integrales.
-Documentación de API.
+The Account Management System is an application designed to manage customer accounts, including the creation, update, and deletion of accounts, as well as managing customer information. This system uses a RESTful API architecture and is built with Spring Boot.
 
-Requisitos
+## Features
 
-Java 11 o superior
-Maven 3.6.0 o superior
-H2 Database (para el entorno de desarrollo)
-Spring Boot 2.5.4
+- Creation, update, and deletion of customer accounts.
+- Management of personal customer information.
+- Input data validation.
+- Support for unit and integration testing.
+- API documentation.
 
-Instalación
+## Requirements
 
-1. Clonar el repositorio
+- Java 11 or higher
+- Maven 3.6.0 or higher
+- H2 Database (for development environment)
+- Spring Boot 2.5.4
 
-    git clone [https://git@github.com:agomezpe/SistemaCuentas.git](https://github.com/agomezpe/SistemaCuentas.git)
-    cd tu_repositorio
+## Installation
 
-2. Compilar y empaquetar el proyecto
+### Clone the repository
 
-    mvn clean package
+```bash
+git clone https://git@github.com:agomezpe/SistemaCuentas.git
+cd your_repository
+```
 
-3. Ejecutar la aplicación
-   
-   java -jar target/sistema-cuentas-1.0.0.jar
+### Build and package the project
 
-   O bien, puedes ejecutar la aplicación directamente con Maven: mvn spring-boot:run
+```bash
+mvn clean package
+```
 
-Uso
+### Run the application
 
-La aplicación estará disponible en http://localhost:8080.
-La API ofrece varios endpoints para la gestión de clientes y cuentas. Puedes acceder a estos endpoints utilizando herramientas como Postman o cURL.
+```bash
+java -jar target/sistema-cuentas-1.0.0.jar
+```
 
-Endpoints principales
+Or, you can run the application directly with Maven:
 
-Clientes
+```bash
+mvn spring-boot:run
+```
 
-GET /clientes: Lista todos los clientes.
+## Usage
 
-GET /clientes/{id}: Trae un cliente por id.
+The application will be available at `http://localhost:8080`. The API provides several endpoints for managing customers and accounts. You can access these endpoints using tools like Postman or cURL.
 
-POST /clientes: Crea un nuevo cliente.
+## Main Endpoints
 
-PUT /clientes/{id}: Actualiza un cliente existente.
+### Customers
 
-DELETE /clientes/{id}: Elimina un cliente.
+- `GET /clientes`: Lists all customers.
+- `GET /clientes/{id}`: Retrieves a customer by id.
+- `POST /clientes`: Creates a new customer.
+- `PUT /clientes/{id}`: Updates an existing customer.
+- `DELETE /clientes/{id}`: Deletes a customer.
 
-Cuentas
+### Accounts
 
-GET /cuentas: Lista todas las cuentas.
+- `GET /cuentas`: Lists all accounts.
+- `GET /cuentas/{id}`: Retrieves an account by id.
+- `POST /cuentas`: Creates a new account.
+- `PUT /cuentas/{id}`: Updates an existing account.
+- `DELETE /cuentas/{id}`: Deletes an account.
 
-GET /cuentas/{id}: Trae un cuenta por id.
+### Transactions
 
-POST /cuentas: Crea una nueva cuenta.
+- `GET /movimientos`: Lists all transactions.
+- `GET /movimientos/{id}`: Retrieves a transaction by id.
+- `POST /movimientos`: Creates a new transaction.
 
-PUT /cuentas/{id}: Actualiza una cuenta existente.
+### Reports
 
-DELETE /cuentas/{id}: Elimina una cuenta.
+- `GET /reportes/{clienteId, fechaInicio, fechaFin}`: Generates a report of a customer's transactions.
 
-Movimientos
+## Project Structure
 
-GET /movimientos: Lista todos los movimientos.
+- `config`: Application configurations, including ModelMapper and other Spring configurations.
+- `controllers`: REST controllers handling HTTP requests.
+- `dto`: Data Transfer Object (DTO) classes used for communication between the application and the client.
+- `entities`: JPA entities representing the database structure.
+- `repositories`: JPA interfaces for data access.
+- `services`: Implementations of business logic and application services.
+- `exception`: Custom exception classes for error handling.
+- `test`: Contains unit and integration tests.
 
-GET /movimientos/{id}: Trae un movimiento por id.
+## Testing
 
-POST /movimientos: Crea un nuevo movimiento.
+To run unit and integration tests, use the following command:
 
-Reportes
+```bash
+mvn test
+```
 
-GET /reportes/{clienteId, fechaInicio, fechaFin}: Genera un reporte de las transacciones de un cliente.
+### Integration Testing
 
+Integration tests are configured to verify the correct functioning of the REST endpoints and interaction with the database.
 
-Estructura del Proyecto
+## Contributions
 
-config: Configuraciones de la aplicación, incluyendo ModelMapper y otras configuraciones de Spring.
+Contributions are welcome. Please open an issue or pull request to discuss any major changes.
 
-controllers: Controladores REST que gestionan las solicitudes HTTP.
-
-dto: Clases de Transferencia de Datos (DTO) utilizadas para la comunicación entre la aplicación y el cliente.
-
-entities: Entidades JPA que representan la estructura de la base de datos.
-
-repositories: Interfaces de JPA para el acceso a datos.
-
-services: Implementaciones de lógica de negocio y servicios de la aplicación.
-
-exception: Clases de excepción personalizadas para el manejo de errores.
-
-test: Contiene pruebas unitarias e integrales.
-
-Pruebas
-
-Para ejecutar las pruebas unitarias e integrales, usa el siguiente comando: mvn test
-
-Pruebas de integración
-
-Las pruebas de integración están configuradas para verificar el correcto funcionamiento de los endpoints REST y la interacción con la base de datos.
-
-Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio importante.
+---
